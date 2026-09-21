@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, GitFork } from "lucide-react";
 import Image from "next/image";
-import { projects } from "@/lib/data";
+import { projects, siteConfig } from "@/lib/data";
 
 export default function Projects() {
   const ref = useRef(null);
@@ -66,7 +66,7 @@ export default function Projects() {
                     <ExternalLink size={18} />
                   </a>
                   <a
-                    href={project.github}
+                    href={siteConfig.github}
                     className="p-2.5 rounded-full glass hover:scale-110 transition-transform"
                     aria-label="GitHub"
                   >
